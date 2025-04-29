@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hobo Holidays</title>
+
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js"
+      }
+    }
+  </script>
+
+  <style>
+    body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        overflow: hidden; /* Prevents scrollbars */
+    }
+    canvas {
+        display: block; /* Ensures no white space around the canvas */
+    }   
+
+    
+    
+
+    
+    
+
+  .loader {
+    width: 100px;
+    aspect-ratio: 1;
+    padding: 10px;
+    box-sizing: border-box;
+    display: grid;
+    background: #ffffff;
+    filter: blur(5px) contrast(10) hue-rotate(300deg);
+    mix-blend-mode: darken;
+
+    /* Position the loader in the center of the screen */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .loader:before,
+  .loader:after {
+    content: "";
+    grid-area: 1/1;
+    width: 40px;
+    height: 40px;
+    background: #000000;
+    animation: l7 2s infinite;
+  }
+
+  .loader:after {
+    animation-delay: -1s;
+  }
+
+  @keyframes l7 {
+    0% { transform: translate(0, 0) }
+    25% { transform: translate(100%, 0) }
+    50% { transform: translate(100%, 100%) }
+    75% { transform: translate(0, 100%) }
+    100% { transform: translate(0, 0) }
+  }
+        
+    
+
+  </style>
+</head>
+<body>
+
+    <div id = "loader-id" class="loader"></div>
+    
+  <script type="module" src="main.js"></script>
+</body>
+</html>
