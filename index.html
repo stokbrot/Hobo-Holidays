@@ -76,6 +76,36 @@
 <body>
 
     <div id = "loader-id" class="loader"></div>
+
+    <div id="marker-popup" style="
+      display: none;
+      position: absolute;
+      background: white;
+      padding: 10px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      transform: translate(-50%, -100%);
+      z-index: 10;
+    ">
+
+    <div id="popup-text" style="margin-bottom: 10px;">
+      Video Uberschrift
+    </div>
+
+    <iframe width="560" height="315" 
+    src="https://www.youtube.com/embed/ge2WkKwGZ6E?si=u_k6ho4HNkn9XIeT&amp;start=1" 
+    title="YouTube video player" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+    referrerpolicy="strict-origin-when-cross-origin" 
+    allowfullscreen>
+  </iframe>
+
+      <div id="popup-text" style="margin-top: 10px;">
+        Video Unterschrift
+        text
+      </div>
+    </div>
     
   <script type="module" src="main.js"></script>
 </body>
