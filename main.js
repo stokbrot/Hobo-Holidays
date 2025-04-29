@@ -87,7 +87,8 @@ scene.background = new THREE.Color(0xDDDDDD); // light gray background
 // Earth texture
 const textureLoader = new THREE.TextureLoader();
 
-const texture = textureLoader.load('src/2.jpg', // Path to your texture
+const texture = textureLoader.load('src/2.jpg',
+//const texture = textureLoader.load('https://eoimages.gsfc.nasa.gov/images/imagerecords/73000/73909/world.topo.bathy.200412.3x21600x10800.jpg', 
   (texture) => {
     // Once the texture is loaded, hide the loading spinner
     document.getElementById('loader-id').style.display = 'none';
@@ -103,7 +104,7 @@ const texture = textureLoader.load('src/2.jpg', // Path to your texture
 
     addMarker(51.5074, -0.1278); // London
 
-    console.log(`Loaded Texture...`);
+    console.log(`Loaded Textures...`);
   },
   (error) => {
     // Handle any loading errors
